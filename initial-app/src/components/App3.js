@@ -5,10 +5,10 @@ class App3 extends Component {
   constructor(props) {
     super(props);
     this.state = {nome:""};
-    this.changeName = this.changeName.bind(this);
   }
   
-  changeName = function(event){
+  // Funções de flecha nunca tem o escopo de this
+  changeName = (event)=>{
     this.setState({nome: event.target.value});
   }
 
